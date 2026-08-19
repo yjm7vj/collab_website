@@ -3,11 +3,11 @@ import vinext from "vinext";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 
-const FALLBACK_LOCAL_DATABASE_ID = "00000000-0000-4000-8000-000000000000";
+const LOCAL_WAITLIST_DATABASE_ID = "00000000-0000-4000-8000-000000000000";
 const waitlistDatabaseName =
   process.env.D1_DATABASE_NAME ?? "collabai-waitlist";
 const waitlistDatabaseId =
-  process.env.D1_DATABASE_ID ?? FALLBACK_LOCAL_DATABASE_ID;
+  process.env.D1_DATABASE_ID ?? LOCAL_WAITLIST_DATABASE_ID;
 
 const { d1, r2 } = hostingConfig;
 

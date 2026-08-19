@@ -106,16 +106,15 @@ Deploy command: npx wrangler deploy
 Root directory: /
 ```
 
-The waitlist form stores submissions in Cloudflare D1. Before deploying,
-create a D1 database named `collabai-waitlist`, copy its `database_id`, and add
-it as a Cloudflare build variable:
+The waitlist form stores submissions in Cloudflare D1. Create a database named
+`collabai-waitlist`, then add its id as a Cloudflare build variable:
 
 ```text
 D1_DATABASE_ID=<your D1 database id>
 ```
 
 The database name defaults to `collabai-waitlist`. If you use a different name,
-also add:
+also set:
 
 ```text
 D1_DATABASE_NAME=<your D1 database name>
