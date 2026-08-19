@@ -113,6 +113,10 @@ The waitlist form stores submissions in Cloudflare D1. Create a database named
 D1_DATABASE_ID=<your D1 database id>
 ```
 
+Set this as a normal build variable, not a private/runtime secret. The build
+must be able to read it so `dist/server/wrangler.json` can be patched before
+`npx wrangler deploy` runs.
+
 The database name defaults to `collabai-waitlist`. If you use a different name,
 also set:
 
