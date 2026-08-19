@@ -107,8 +107,19 @@ Root directory: /
 ```
 
 The waitlist form stores submissions in Cloudflare D1. Before deploying,
-create a D1 database named `collabai-waitlist`, copy its `database_id`, and
-replace `YOUR_D1_DATABASE_ID` in `wrangler.jsonc`.
+create a D1 database named `collabai-waitlist`, copy its `database_id`, and add
+it as a Cloudflare build variable:
+
+```text
+D1_DATABASE_ID=<your D1 database id>
+```
+
+The database name defaults to `collabai-waitlist`. If you use a different name,
+also add:
+
+```text
+D1_DATABASE_NAME=<your D1 database name>
+```
 
 After the first deploy, apply the waitlist table migration:
 

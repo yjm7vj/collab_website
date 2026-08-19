@@ -3,8 +3,11 @@ import vinext from "vinext";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 
-const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
-  "00000000-0000-4000-8000-000000000000";
+const FALLBACK_LOCAL_DATABASE_ID = "00000000-0000-4000-8000-000000000000";
+const waitlistDatabaseName =
+  process.env.D1_DATABASE_NAME ?? "collabai-waitlist";
+const waitlistDatabaseId =
+  process.env.D1_DATABASE_ID ?? FALLBACK_LOCAL_DATABASE_ID;
 
 const { d1, r2 } = hostingConfig;
 
@@ -18,8 +21,8 @@ const localBindingConfig = {
     ? [
         {
           binding: d1,
-          database_name: "site-creator-d1",
-          database_id: SITE_CREATOR_PLACEHOLDER_DATABASE_ID,
+          database_name: waitlistDatabaseName,
+          database_id: waitlistDatabaseId,
         },
       ]
     : [],
