@@ -16,7 +16,7 @@ npm run dev
 npm run build
 ```
 
-This starter does not use `wrangler.jsonc`.
+This project includes `wrangler.jsonc` for Cloudflare Workers deployment.
 
 ## Included Shape
 
@@ -93,6 +93,28 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 - `npm run build`: verify the vinext build output
 - `npm test`: build the starter and verify its rendered loading skeleton
 - `npm run db:generate`: generate Drizzle migrations after schema changes
+- `npm run db:apply:remote`: apply the waitlist migration to the remote D1 database
+- `npm run deploy`: build and deploy the Worker with Wrangler
+
+## Cloudflare Deployment
+
+The Cloudflare dashboard build settings should be:
+
+```text
+Build command: npm run build
+Deploy command: npx wrangler deploy
+Root directory: /
+```
+
+The waitlist form stores submissions in Cloudflare D1. Before deploying,
+create a D1 database named `collabai-waitlist`, copy its `database_id`, and
+replace `YOUR_D1_DATABASE_ID` in `wrangler.jsonc`.
+
+After the first deploy, apply the waitlist table migration:
+
+```bash
+npx wrangler d1 execute collabai-waitlist --remote --file drizzle/0000_far_sasquatch.sql
+```
 
 ## Learn More
 
