@@ -4,7 +4,6 @@ import {
   CheckCircle2,
   Database,
   FileCode2,
-  GitPullRequest,
   MessageSquare,
   PauseCircle,
   UsersRound,
@@ -135,7 +134,7 @@ export default function HowItWorks() {
           <div className="stack-sources">
             <span><Bot size={18} /> AI model</span>
             <span><FileCode2 size={18} /> Local folder</span>
-            <span><GitPullRequest size={18} /> GitHub repo</span>
+            <span><FileCode2 size={18} /> Shared repository</span>
           </div>
         </div>
       </section>

@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import {
+  ArrowRight,
   FileCode2,
-  GitPullRequest,
   MessageSquare,
   ShieldCheck,
   Vote,
   Workflow,
 } from "lucide-react";
-import { Footer, Header, repoUrl } from "./components/Chrome";
+import { Footer, Header } from "./components/Chrome";
 
 export const metadata: Metadata = {
   title: "Collab.ai | Multiplayer AI Rooms",
@@ -35,11 +35,11 @@ export default function Home() {
             they happen.
           </p>
           <div className="hero-actions">
-            <a className="button primary" href={repoUrl} target="_blank" rel="noreferrer">
-              <GitPullRequest size={18} />
-              View repo
+            <a className="button primary" href="/waitlist">
+              <ArrowRight size={18} />
+              Learn more
             </a>
-            <a className="button secondary" href="#how">
+            <a className="button secondary" href="/how-it-works">
               See basics
             </a>
           </div>
@@ -122,9 +122,9 @@ export default function Home() {
             while writes remain visible and governed.
           </p>
         </div>
-        <a className="text-link" href={repoUrl} target="_blank" rel="noreferrer">
-          Explore the implementation
-          <GitPullRequest size={17} />
+        <a className="text-link" href="/waitlist">
+          Learn more
+          <ArrowRight size={17} />
         </a>
       </section>
       <Footer />

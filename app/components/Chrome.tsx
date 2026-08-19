@@ -1,6 +1,4 @@
-import { GitPullRequest, Mail, MapPin } from "lucide-react";
-
-export const repoUrl = "https://github.com/yjm7vj/collab_ai";
+import { Mail, MapPin } from "lucide-react";
 
 export function Header() {
   return (
@@ -11,10 +9,6 @@ export function Header() {
             <Mail size={14} />
             hello@collab.ai
           </span>
-          <a href={repoUrl} target="_blank" rel="noreferrer">
-            <GitPullRequest size={14} />
-            GitHub
-          </a>
         </div>
       </div>
 
@@ -29,9 +23,7 @@ export function Header() {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/how-it-works">How it works</a>
-          <a href={repoUrl} target="_blank" rel="noreferrer">
-            Repo
-          </a>
+          <a href="/waitlist">Waitlist</a>
         </nav>
       </header>
     </>
