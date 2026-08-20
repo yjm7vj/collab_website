@@ -23,6 +23,7 @@ export function Header() {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/how-it-works">How it works</a>
+          <a href="/pricing">Pricing</a>
           <a href="/waitlist">Waitlist</a>
         </nav>
       </header>
