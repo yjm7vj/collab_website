@@ -26,7 +26,7 @@ const tiers = [
   {
     name: "Team",
     summary: "For small groups using Collab.ai on real shared work.",
-    price: "Custom",
+    price: "$30/month",
     note: "Higher monthly credits",
     icon: UsersRound,
     featured: true,
@@ -42,7 +42,7 @@ const tiers = [
   {
     name: "Enterprise",
     summary: "For organizations that need controls, scale, and support.",
-    price: "Contact us",
+    price: "$80/month",
     note: "Usage and support tailored to your team",
     icon: Building2,
     features: [
